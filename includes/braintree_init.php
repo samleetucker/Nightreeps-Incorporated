@@ -1,5 +1,4 @@
 <?php
-// session_start();
 require_once("../vendor/autoload.php");
 
 if(file_exists(__DIR__ . "/../.env")) {
