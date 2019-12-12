@@ -20,8 +20,8 @@
       <p>
       <!-- <a href='cart.php'><button> Drop-in UI w/ 3D Secure and Kount</button></a>
       <a href='host3d.php'><button> Basic Hosted Fields</button></a> -->
-      <a href='1pc.php'><button> Legacy | (• ◡•)| (❍ᴥ❍ʋ)</button></a>
-      <a href='basics.php'><button> Nuovo 🍝</button></a>
+      <!-- <a href='1pc.php'><button> Legacy | (• ◡•)| (❍ᴥ❍ʋ)</button></a> -->
+      <a href='basics.php'><button> Begin </button></a>
 
   </div>
     </body>
