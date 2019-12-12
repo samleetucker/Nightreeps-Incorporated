@@ -32,6 +32,9 @@
   <p>Next we are going to need to make the Hosted Fields forms. This page is going to use the basic example which is on our
     <a href="https://developers.braintreepayments.com/guides/hosted-fields/setup-and-integration/javascript/v3#basic-integration">Hosted Fields Dev Docs.</a>
   </p>
+  <p>
+    The above client token is being used to initialize the components below! Don't forget, client tokens expire in 24 hours. That is why a client token is generated every time this page is landed on.
+  </p>
 
   <!-- Time to get saucy. Below is going to be the script that loads all of the Hosted Fields components and communicates with the server-side junk! -->
 
