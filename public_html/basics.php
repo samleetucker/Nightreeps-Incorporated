@@ -48,7 +48,7 @@
     <label for="expiration-date" class="hosted-fields--label">Expiration Date</label>
     <div id="expiration-date" class="hosted-field"></div>
     <input type="submit" value="Request Payment Method" disabled />
-    <p><div>Fill out the form and click the button to get a nonce!</div></p>
+    <p><div>Fill out the form and click the button to get a nonce! Click it again to make a transaction.</div></p>
     <div id="nonce-display" name="nonce-display" hidden></div>
     <input type="hidden" id="nonce" name="nonce" />
   </form>
