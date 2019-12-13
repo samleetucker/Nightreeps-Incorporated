@@ -1,0 +1,105 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  /* background-color:#f7f7f7; */
+  float:left;
+  width:60%;
+  padding:0 20px;
+  border-radius: 5px;
+  border: 2px solid #D6D6D6;
+}
+.right {
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+.button {
+  background-color: #f7f7f7;
+  color: black;
+  border: 2px solid #D6D6D6;
+  border-radius: 4px;
+  padding: 7px;
+}
+
+.button:hover {
+  background-color: #D6D6D6;
+  color: black;
+  border: 2px solid #f7f7f7;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+
+.hosted-field {
+font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+ height: 50px;
+ box-sizing: border-box;
+ width: 100%;
+ padding: 12px;
+ display: inline-block;
+ box-shadow: none;
+ font-size: 12px;
+ border-radius: 5px;
+ border: 1px solid #dddddd;
+ line-height: 20px;
+ /* background: #fcfcfc; */
+ background: #ffffff;
+ margin-bottom: 12px;
+ /* background: linear-gradient(to right, white 50%, #fcfcfc 50%); */
+ background-size: 200% 100%;
+ background-position: right bottom;
+ transition: all 300ms ease-in-out;
+}
+
+/* Hosted fields styling */
+.hosted-fields--label {
+ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+ text-transform: uppercase;
+ font-size: 14px;
+ display: block;
+ margin-bottom: 6px;
+}
+
+.braintree-hosted-fields-focused {
+ border: 1px solid
+ /* #64d18a */
+ ;
+ border-radius: 5px;
+ background-position: left bottom;
+ font-size: 18px;
+}
+
+.braintree-hosted-fields-invalid {
+ border: 1px solid #ed574a;
+}
+
+.braintree-hosted-fields-valid {
+}
+
+#cardForm {
+ max-width: 50.75em;
+ margin: 0 auto;
+ padding: 1.875em;
+}
