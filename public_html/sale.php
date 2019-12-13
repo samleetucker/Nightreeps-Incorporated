@@ -26,8 +26,9 @@ if ($result->success) {
 <div align="center" class="wrapper">
 <h1> R e s u l t </h1>
   <div>
-<p><?php echo($result)?></p>
-<p><?php echo($result->transaction->status)?> </p>
+<p>Amount: <?php echo($result->transaction->amount)?></p>
+<p>Status: <?php echo($result->transaction->status)?> </p>
+<p>ID: <?php echo($result->transaction->id)?> </p>
   </div>
 </div>
 </html>
