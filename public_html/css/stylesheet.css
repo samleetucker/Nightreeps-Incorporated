@@ -74,6 +74,28 @@ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,U
  transition: all 300ms ease-in-out;
 }
 
+.hosted-field-small {
+font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+ float:left;
+ height: 50px;
+ box-sizing: border-box;
+ width: 20%;
+ padding: 12px;
+ display: inline-block;
+ box-shadow: none;
+ font-size: 12px;
+ border-radius: 5px;
+ border: 1px solid #dddddd;
+ line-height: 20px;
+ /* background: #fcfcfc; */
+ background: #ffffff;
+ margin-bottom: 12px;
+ /* background: linear-gradient(to right, white 50%, #fcfcfc 50%); */
+ background-size: 200% 100%;
+ background-position: right bottom;
+ transition: all 300ms ease-in-out;
+}
+
 /* Hosted fields styling */
 .hosted-fields--label {
  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
@@ -104,3 +126,8 @@ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,U
  margin: 0 auto;
  padding: 1.875em;
 }
+/* #expiration-date{
+  max-width: 30%
+  margin: 0 auto;
+  padding: 1.875em;
+} */
