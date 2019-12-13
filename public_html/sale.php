@@ -23,7 +23,7 @@ if ($result->success) {
   }
 }
 ?>
-<div align="center" class="wrapper">
+<div align="center" class="main">
 <h1> R e s u l t </h1>
   <div>
 <p>Amount: <?php echo($result->transaction->amount)?></p>
