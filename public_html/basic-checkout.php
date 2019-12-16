@@ -83,8 +83,8 @@
     <!-- Time to get saucy. Below is going to be the script that loads all of the Hosted Fields components and communicates with the server-side junk! -->
 
     <form method="post" id="details" action="/sale.php">
-      <label for="amount" class="hosted-fields--label">Amount</label>
-      <input type="number" class="hosted-field" id="amount" name="amount">
+      <label for="amount" class="hosted-fields--label">Amount <a href="https://developers.braintreepayments.com/reference/general/testing/php#transaction-amounts" target="_blank">(use testing values)</a></label>
+      <input type="number" class="hosted-field" id="amount" name="amount" placeholder="100.00"required>
 
       <label for="card-number" class="hosted-fields--label">Card Number</label>
       <div id="card-number" class="hosted-field"></div>
