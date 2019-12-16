@@ -51,6 +51,10 @@
   .menu, .main, .right {
     width:100%;
   }
+  .main{
+  border-radius: 0px;
+  border-width: 2px 0px 2px 0px;
+  }
 }
 
 .hosted-field {
