@@ -20,7 +20,7 @@
 
 <div class="main">
     <br></br>
-    <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php">client token.</a></p>
+    <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is the code and its result: </p></h4>
       <div class="well well-sm"><?php highlight_string("<?php
     \$gateway->clientToken()->generate(
@@ -73,11 +73,11 @@
 </pre>
     </div>
     </p>
-    <p>Next we are going to need to make the Hosted Fields forms. This page is going to use the basic example which is on our
-      <a href="https://developers.braintreepayments.com/guides/hosted-fields/setup-and-integration/javascript/v3#basic-integration">Hosted Fields Dev Docs.</a>
+    <p>This page is going to use the basic example which is on our
+      <a href="https://developers.braintreepayments.com/guides/hosted-fields/setup-and-integration/javascript/v3#basic-integration" target="_blank">Hosted Fields Dev Docs.</a> More in-line code examples to come.
     </p>
     <p>
-      The above client token is being used to initialize the components below! Don't forget, <a href="https://internal.braintreepayments.com/display/DD/Client+Authorization+-+JWT+Cheat+Sheet"> client tokens expire in 24 hours </a>. That is why a client token is generated every time this page is landed on.
+      The above client token is being used to initialize the components below! Don't forget, <a href="https://internal.braintreepayments.com/display/DD/Client+Authorization+-+JWT+Cheat+Sheet" target="_blank"> client tokens expire in 24 hours </a>. That is why a client token is generated every time this page is landed on.
     </p>
 
     <!-- Time to get saucy. Below is going to be the script that loads all of the Hosted Fields components and communicates with the server-side junk! -->
