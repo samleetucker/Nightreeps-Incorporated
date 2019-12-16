@@ -83,6 +83,9 @@
     <!-- Time to get saucy. Below is going to be the script that loads all of the Hosted Fields components and communicates with the server-side junk! -->
 
     <form method="post" id="details" action="/sale.php">
+      <label for="amount" class="hosted-fields--label">Amount</label>
+      <input type="number" class="hosted-field" id="amount" name="amount">
+
       <label for="card-number" class="hosted-fields--label">Card Number</label>
       <div id="card-number" class="hosted-field"></div>
 
@@ -91,6 +94,7 @@
 
       <label for="expiration-date" class="hosted-fields--label">Expiration Date</label>
       <div id="expiration-date" class="hosted-field"></div>
+
       <input class="button" type="submit" value="Request Payment Method" disabled />
       <p><div>Fill out the form and click the button to get a nonce! Click it again to make a transaction.</div></p>
       <div id="nonce-display" name="nonce-display" hidden></div>

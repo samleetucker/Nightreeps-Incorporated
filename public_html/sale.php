@@ -5,9 +5,10 @@ require_once("../includes/head.php");
 require_once("../includes/braintree_init.php");
 //declare variables from le post
 $nonce = $_POST["nonce"];
+$amount = $_POST["amount"];
 // echo($nonce);
 $result = $gateway->transaction()->sale([
-  'amount' => '10.00',
+  'amount' => $amount,
   'paymentMethodNonce' => $nonce,
   'options' => [
     'submitForSettlement' => True
