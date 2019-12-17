@@ -76,7 +76,7 @@
   border-width: 2px 0px 2px 0px;
   }
   ::-webkit-scrollbar {
-      /* -webkit-appearance: none; */
+      -webkit-appearance: none;
       border-radius: 10px;
       width: 3px;
       height: 6px;

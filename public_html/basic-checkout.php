@@ -22,7 +22,7 @@
     <br></br>
     <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is the code and its result: </p></h4>
-      <div class="well well-sm"><?php highlight_string("<?php
+      <div class="code"><?php highlight_string("<?php
     \$gateway->clientToken()->generate(
       ['customerId' => 242967293,
       'merchantAccountId' => 'MindSapling-CAD'
