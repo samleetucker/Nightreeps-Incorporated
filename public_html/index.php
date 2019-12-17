@@ -20,7 +20,7 @@
       <br>
       <h4> Night-what-inc . . ?</h4>
       <p>
-        Nightreeps Inc. is a growing collection of integrations designed to showcase specific aspects of our products, enable end to end testing, and simply provide a showcase of what our product can do
+        Nightreeps Inc. is a growing collection of integrations designed to showcase specific aspects of our products, enable end to end testing, and simply provide a showcase of what our product can do.
       <p>
         This project is being managed on the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank">Nightreeps-incorporated Git Hub repository</a>. Long term goals are to make Nightreeps-Incorporated an open repository where Treeps can clone, make pull requests, and contribute to the project's success.
       <p>
@@ -31,7 +31,7 @@
       <!-- <a href='1pc.php'><button> Legacy | (• ◡•)| (❍ᴥ❍ʋ)</button></a> -->
       <br></br>
       <p> Here's what we have so far:
-      <p><a href='basic-checkout.php'><button class="button"> Basic Hosted Fields Integraiton w/ Client Token Demo </button></a></p>
+      <p><a href='basic-checkout.php'><button class="button"> Basic Hosted Fields Integration w/ Client Token Demo </button></a></p>
 
   </div>
 </div>
