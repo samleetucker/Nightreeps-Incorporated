@@ -58,8 +58,8 @@
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
-    overflow: scroll;
-    overflow-x: visible;
+    overflow: visible;
+    overflow-x: scroll;
     white-space: nowrap;
     padding: 1em 1.5em;
     display: block;
