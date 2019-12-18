@@ -25,7 +25,7 @@
         This project is being managed on the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank">Nightreeps-incorporated Git Hub repository</a>. Long term goals are to make Nightreeps-Incorporated an open repository where Treeps can clone, make pull requests, and contribute to the project's success.
       <p>
         Check out the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank"> Git Hub repository </a>to see the amount of work done so far, and be sure to watch or star it to follow along!
-      <p>Lastly, this project is "mobile first" -- anyone can pull it up on thier phone using the URL and follow along without any kind of disruption or difficulty of use.
+      <p>Lastly, this project is "mobile first" -- anyone can pull it up on their phone using the URL and follow along without any kind of disruption or difficulty of use.
       <!-- <a href='cart.php'><button> Drop-in UI w/ 3D Secure and Kount</button></a>
       <a href='host3d.php'><button> Basic Hosted Fields</button></a> -->
       <!-- <a href='1pc.php'><button> Legacy | (• ◡•)| (❍ᴥ❍ʋ)</button></a> -->
