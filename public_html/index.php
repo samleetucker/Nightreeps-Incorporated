@@ -12,8 +12,7 @@
 </div>
 <div style="overflow:auto">
 <div class="menu">
-  <!-- navigation will go here -->
-  <a href="#"></a>
+    <?php require_once("../includes/nav.html"); ?>
 </div>
   <div class="main">
     <body>
@@ -30,8 +29,6 @@
       <a href='host3d.php'><button> Basic Hosted Fields</button></a> -->
       <!-- <a href='1pc.php'><button> Legacy | (• ◡•)| (❍ᴥ❍ʋ)</button></a> -->
       <br></br>
-      <p> Here's what we have so far:
-      <p><a href='basic-checkout.php'><button class="button"> Basic Hosted Fields Integration w/ Client Token Demo </button></a></p>
 
   </div>
 </div>
