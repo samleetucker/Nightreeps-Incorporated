@@ -130,6 +130,7 @@
                 });
               });
         }
+        host();
         function fix(){
           client_token = "<?php echo($gateway->clientToken()->generate(
             ['customerId' => 242967293,
