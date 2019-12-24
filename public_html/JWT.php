@@ -14,21 +14,18 @@
 
 <div style="overflow:auto">
   <div class="menu">
-    <!-- navigation will go here -->
-    <a href="#"></a>
+    <?php require_once("../includes/nav.html"); ?>
   </div>
 
 <div class="main">
     <br></br>
     <p>The first thing any client-side component needs is client authorization. Most merchant will opt to use a <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is a code example. It is generated on the server-side.</p></h4>
-    <div class="code"><?php highlight_string("<?php
-  \$gateway->clientToken()->generate(
-    ['customerId' => 242967293,
-    'merchantAccountId' => 'MindSapling-CAD'
-  ])
-?>");?>
-  </div>
+    <div><pre class="code"><code class="php">$gateway->clientToken()->generate([
+  'customerId' => 242967293,
+  'merchantAccountId' => 'MindSapling-CAD'
+])
+</code></pre></div>
     <p>
       However, currently in sandbox, and soon to be in production, these<a href="https://internal.braintreepayments.com/display/DD/Client+Authorization+-+JWT+Cheat+Sheet" target="_blank"> client tokens will expire in 24 hours </a>. That is why a client token should be generated every time a checkout page is landed on.
     </p>
@@ -76,7 +73,7 @@
             // PayPal or Data Collector.
 
             braintree.hostedFields.create({
-              client: clientInstance,
+              client: client_token,
               styles: {
                 'input': {
                   'font-size': '14px'

@@ -14,23 +14,22 @@
 
 <div style="overflow:auto">
   <div class="menu">
-    <!-- navigation will go here -->
-    <a href="#"></a>
+    <?php require_once("../includes/nav.html"); ?>
   </div>
 
 <div class="main">
     <br></br>
     <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is the code and its result: </p></h4>
-      <div class="code"><?php highlight_string("<?php
-    \$gateway->clientToken()->generate(
-      ['customerId' => 242967293,
-      'merchantAccountId' => 'MindSapling-CAD'
-    ])
-    ?>");?></div>
+    <pre class="code">
+      <code class="php>" style="background-color: #f7f7f7;">$gateway->clientToken()->generate([
+  'customerId' => 242967293,
+  'merchantAccountId' => 'MindSapling-CAD'
+])</code>
+    </pre>
       <p><button data-toggle="collapse" data-target="#c1" class="button">show/hide result</button>
         <div id="c1" class="collapse">
-          <pre><code id="client_token"></code></pre>
+          <pre class="code"><code id="client_token"></code></pre>
         </div>
       </p>
     <!-- This script is creating the client token and injecting it into the HTML. The client token variable is going to be used later for client authorization! -->
@@ -43,33 +42,42 @@
     <p>The cool thing about these dudes is that you can actually decode them to see the parameters used in the above code. Lots of useful information can be found in a client token. </p>
     <p><button data-toggle="collapse" data-target="#c2" class="button">Here is an example</button>
     <div id="c2" class="collapse">
-<pre><code id="decode">
-  "version":2,
-  "authorizationFingerprint":"eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtc2FuZGJveCIsImlzcyI6IkF1dGh5In0.eyJleHAiOjE1NzYyMTI1MDEsImp0aSI6IjY4OTU0MGVjLTM1MDQtNGIxNi05YzU3LTZiNmRhMTQ4YjA0NSIsInN1YiI6InR0OHNydHBwOHlmZ2ZnaHAiLCJpc3MiOiJBdXRoeSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InR0OHNydHBwOHlmZ2ZnaHAiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJvcHRpb25zIjp7ImN1c3RvbWVyX2lkIjoyNDI5NjcyOTMsIm1lcmNoYW50X2FjY291bnRfaWQiOiJNaW5kU2FwbGluZy1DQUQifX0.LwDd-s35WTMeFScTO9Tlfum0W5pleySG69JYDLJobMJOchWyCHFGe-50G2tMx2x-2eJ3R4qRaWdc2BZNm24Jjg?customer_id=",
-  "configUrl":"https://api.sandbox.braintreegateway.com:443/merchants/tt8srtpp8yfgfghp/client_api/v1/configuration",
+<pre class="code">
+  <code id="decode" class="https">"version":2,
+  "authorizationFingerprint":eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtc2FuZGJveCIsImlzcyI6IkF1dGh5In0.eyJleHAiOjE1NzYyMTI1MDEsImp0aSI6IjY4OTU0MGVjLTM1MDQtNGIxNi05YzU3LTZiNmRhMTQ4YjA0NSIsInN1YiI6InR0OHNydHBwOHlmZ2ZnaHAiLCJpc3MiOiJBdXRoeSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InR0OHNydHBwOHlmZ2ZnaHAiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJvcHRpb25zIjp7ImN1c3RvbWVyX2lkIjoyNDI5NjcyOTMsIm1lcmNoYW50X2FjY291bnRfaWQiOiJNaW5kU2FwbGluZy1DQUQifX0.LwDd-s35WTMeFScTO9Tlfum0W5pleySG69JYDLJobMJOchWyCHFGe-50G2tMx2x-2eJ3R4qRaWdc2BZNm24Jjg?customer_id=,
+  "configUrl":https://api.sandbox.braintreegateway.com:443/merchants/tt8srtpp8yfgfghp/client_api/v1/configuration,
   "graphQL": {
-      "url": "https://payments.sandbox.braintree-api.com/graphql", "date": "2018-05-08"
-  }
-  ,
+    "url": https://payments.sandbox.braintree-api.com/graphql, date: 2018-05-08
+  },
   "challenges":[],
-  "environment":"sandbox",
-  "clientApiUrl":"https://api.sandbox.braintreegateway.com:443/merchants/tt8srtpp8yfgfghp/client_api",
-  "assetsUrl":"https://assets.braintreegateway.com",
-  "authUrl":"https://auth.venmo.sandbox.braintreegateway.com",
+  "environment":sandbox,
+  "clientApiUrl":https://api.sandbox.braintreegateway.com:443/merchants/tt8srtpp8yfgfghp/client_api,
+  "assetsUrl":https://assets.braintreegateway.com,
+  "authUrl":https://auth.venmo.sandbox.braintreegateway.com,
   "analytics": {
-      "url": "https://origin-analytics-sand.sandbox.braintree-api.com/tt8srtpp8yfgfghp"
-  }
-  ,
+    "url": https://origin-analytics-sand.sandbox.braintree-api.com/tt8srtpp8yfgfghp
+  },
   "threeDSecureEnabled":true,
   "paypalEnabled":true,
   "paypal": {
-      "displayName": "MindSapling", "clientId": null, "privacyUrl": "http://example.com/pp", "userAgreementUrl": "http://example.com/tos", "baseUrl": "https://assets.braintreegateway.com", "assetsUrl": "https://checkout.paypal.com", "directBaseUrl": null, "allowHttp": true, "environmentNoNetwork": true, "environment": "offline", "unvettedMerchant": false, "braintreeClientId": "masterclient3", "billingAgreementsEnabled": true, "merchantAccountId": "MindSapling-CAD", "currencyIsoCode": "CAD"
-  }
-  ,
-  "merchantId":"tt8srtpp8yfgfghp",
-  "venmo":"off",
-  "merchantAccountId":"MindSapling-CAD"
-  </code>
+    "displayName": MindSapling,
+    "clientId": null,
+    "privacyUrl": http://example.com/pp,
+    "userAgreementUrl": http://example.com/tos,
+    "baseUrl": https://assets.braintreegateway.com,
+    "assetsUrl": https://checkout.paypal.com,
+    "directBaseUrl": null, "allowHttp": true,
+    "environmentNoNetwork": true,
+    "environment": offline,
+    "unvettedMerchant": false,
+    "braintreeClientId": masterclient3,
+    "billingAgreementsEnabled": true,
+    "merchantAccountId": MindSapling-CAD,
+    "currencyIsoCode": CAD
+  },
+  "merchantId":tt8srtpp8yfgfghp,
+  "venmo":off,
+  "merchantAccountId":MindSapling-CAD</code>
 </pre>
     </div>
     </p>
