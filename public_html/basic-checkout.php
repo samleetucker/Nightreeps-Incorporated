@@ -19,7 +19,7 @@
 
 <div class="main">
     <br></br>
-    <p>The first thing any client-side component needs is client authorization.  This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
+    <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is the code and its result: </p></h4>
     <pre class="code">
       <code class="php>" style="background-color: #f7f7f7;">$gateway->clientToken()->generate([
@@ -96,6 +96,9 @@
 
       <label for="card-number" class="hosted-fields--label">Card Number</label>
       <div id="card-number" class="hosted-field"></div>
+
+      <label for="name" class="hosted-fields--label">Name</label>
+      <div id="name" class="hosted-field"></div>
 
       <label for="cvv" class="hosted-fields--label">CVV</label>
       <div id="cvv" class="hosted-field"></div>
