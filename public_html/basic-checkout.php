@@ -94,11 +94,11 @@
       <label for="amount" class="hosted-fields--label">Amount <a href="https://developers.braintreepayments.com/reference/general/testing/php#transaction-amounts" target="_blank">(use testing values)</a></label>
       <input type="number" class="hosted-field" id="amount" name="amount" placeholder="100.00"required>
 
+      <label for="name" class="hosted-fields--label">Name</label>
+      <input type="text" class="hosted-field" id="amount" name="name" placeholder="Johnny Utah"required>
+
       <label for="card-number" class="hosted-fields--label">Card Number</label>
       <div id="card-number" class="hosted-field"></div>
-
-      <label for="name" class="hosted-fields--label">Name</label>
-      <div id="name" class="hosted-field"></div>
 
       <label for="cvv" class="hosted-fields--label">CVV</label>
       <div id="cvv" class="hosted-field"></div>
