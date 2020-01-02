@@ -27,6 +27,10 @@
         Any token issued after the change will expire after 24 hours. These exired tokens will lead to a few pieces of behavior which Support can look out for when fielding requests.</p>
         <p>The biggest red flag for this will be merchants who reach out with blank checkout fields, or a Drop-in UI that does not load. Notice how the fields load, and the non Hosted Fields work just fine:</p>
         <br>
+        <p>See below the the client token being used. Note: it changes when you fix the fields.
+        <p><button data-toggle="collapse" data-target="#c2" class="button">Show/hide</button>
+        <div id="c2" class="collapse"><pre class="code" id="client_token"></pre></div>
+
         <form method="post" id="details" action="/sale.php">
           <label for="name" class="hosted-fields--label">Name</label>
           <input type="name" class="hosted-field" id="name" name="name" placeholder="Johnny Utah"required>
@@ -59,6 +63,7 @@
         var client_token = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpGVXpJMU5pSXNJbXRwWkNJNklqSXdNVGd3TkRJMk1UWXRjMkZ1WkdKdmVDSXNJbWx6Y3lJNklrRjFkR2g1SW4wLmV5SmxlSEFpT2pFMU56WTJNelkxTlRZc0ltcDBhU0k2SWpkbE16TTROVGszTFRka1pqUXROR0k0WWkxaFl6RmpMV0l6TVdabFl6QTVPVEF3TkNJc0luTjFZaUk2SW5SME9ITnlkSEJ3T0hsbVoyWm5hSEFpTENKcGMzTWlPaUpCZFhSb2VTSXNJbTFsY21Ob1lXNTBJanA3SW5CMVlteHBZMTlwWkNJNkluUjBPSE55ZEhCd09IbG1aMlpuYUhBaUxDSjJaWEpwWm5sZlkyRnlaRjlpZVY5a1pXWmhkV3gwSWpwMGNuVmxmU3dpY21sbmFIUnpJanBiSW0xaGJtRm5aVjkyWVhWc2RDSmRMQ0p2Y0hScGIyNXpJanA3SW1OMWMzUnZiV1Z5WDJsa0lqb3lOREk1TmpjeU9UTXNJbTFsY21Ob1lXNTBYMkZqWTI5MWJuUmZhV1FpT2lKTmFXNWtVMkZ3YkdsdVp5MURRVVFpZlgwLjAwVGdPWEo4U1c1ZEhsaE1xTWRHSWpzMTgtYnVyVlNsYkxUaVYtVks3aGNESHlsVlVwNEk2ZzlrVW1VSi00X1ZuVXkzRHNsdXJuWHhQNjRHcmZaelZ3P2N1c3RvbWVyX2lkPSIsImNvbmZpZ1VybCI6Imh0dHBzOi8vYXBpLnNhbmRib3guYnJhaW50cmVlZ2F0ZXdheS5jb206NDQzL21lcmNoYW50cy90dDhzcnRwcDh5ZmdmZ2hwL2NsaWVudF9hcGkvdjEvY29uZmlndXJhdGlvbiIsImdyYXBoUUwiOnsidXJsIjoiaHR0cHM6Ly9wYXltZW50cy5zYW5kYm94LmJyYWludHJlZS1hcGkuY29tL2dyYXBocWwiLCJkYXRlIjoiMjAxOC0wNS0wOCJ9LCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL3R0OHNydHBwOHlmZ2ZnaHAvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vb3JpZ2luLWFuYWx5dGljcy1zYW5kLnNhbmRib3guYnJhaW50cmVlLWFwaS5jb20vdHQ4c3J0cHA4eWZnZmdocCJ9LCJ0aHJlZURTZWN1cmVFbmFibGVkIjp0cnVlLCJwYXlwYWxFbmFibGVkIjp0cnVlLCJwYXlwYWwiOnsiZGlzcGxheU5hbWUiOiJNaW5kU2FwbGluZyIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6Ik1pbmRTYXBsaW5nLUNBRCIsImN1cnJlbmN5SXNvQ29kZSI6IkNBRCJ9LCJtZXJjaGFudElkIjoidHQ4c3J0cHA4eWZnZmdocCIsInZlbm1vIjoib2ZmIiwibWVyY2hhbnRBY2NvdW50SWQiOiJNaW5kU2FwbGluZy1DQUQifQ=="
 
         function host(){
+          document.getElementById("client_token").innerHTML = client_token;
           braintree.client.create({
             authorization: client_token
           }, function (clientErr, clientInstance) {
