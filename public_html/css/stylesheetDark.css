@@ -1,6 +1,29 @@
 /* Basic styling */
+
+/* colors:
+Light Grey
+Hex: #E6E6E6
+
+Grey
+Hex: #B3B3B3
+
+Dark Grey
+Hex: #666666
+
+Extra Dark Grey
+Hex: #262626
+
+Orange
+Hex: #FF6B00
+
+Blue
+Hex: #1524D9
+
+ */
 * {
   box-sizing: border-box;
+  color: white;
+  background-color: black;
 }
 .menu {
   float:left;
@@ -12,8 +35,8 @@
   margin-top:7px;
   display:block;
   width:100%;
-  color:black;
-  background-color: #f7f7f7
+  color: White;
+  background-color: #E6E6E6
 }
 .menu a:hover {
   padding:8px;
@@ -29,8 +52,7 @@
   width:60%;
   min-height:40%;
   padding:0 20px;
-  border-radius: 5px;
-  border: 2px solid #D6D6D6;
+  border: 2px solid white;
 }
 .right {
   float:left;
@@ -56,11 +78,6 @@
   border-radius: 4px;
 }
 .code {
-    background: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    border-left: 3px solid #FF6B00;
-    color: #666;
     page-break-inside: avoid;
     font-size: 14px;
     line-height: 1.6;
@@ -108,11 +125,10 @@ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,U
  display: inline-block;
  box-shadow: none;
  font-size: 12px;
- border-radius: 5px;
- border: 1px solid #dddddd;
+ border: 1px solid white;
  line-height: 20px;
  /* background: #fcfcfc; */
- background: #ffffff;
+ background: #black;
  margin-bottom: 12px;
  /* background: linear-gradient(to right, white 50%, #fcfcfc 50%); */
  background-size: 200% 100%;
@@ -130,11 +146,10 @@ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,U
  display: inline-block;
  box-shadow: none;
  font-size: 12px;
- border-radius: 5px;
- border: 1px solid #dddddd;
+ border: 1px solid #white;
  line-height: 20px;
  /* background: #fcfcfc; */
- background: #ffffff;
+ background: #black;
  margin-bottom: 12px;
  /* background: linear-gradient(to right, white 50%, #fcfcfc 50%); */
  background-size: 200% 100%;
@@ -155,7 +170,6 @@ font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,U
  border: 1px solid
  /* #64d18a */
  ;
- border-radius: 5px;
  background-position: left bottom;
  font-size: 18px;
 }

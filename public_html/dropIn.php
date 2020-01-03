@@ -26,7 +26,7 @@
       <form method="post" id="details" action="/customerCreate.php">
         <input type="hidden" id="nonce" name="nonce" />
       </form>
-    <div id="dropin-container"></div>
+    <div id="dropin-container" style="float: none; width:70%;"></div>
       <button id="submit-button" class="button">Request payment method</button>
       <script>
         var button = document.querySelector('#submit-button');
