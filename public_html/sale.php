@@ -8,6 +8,7 @@ $nonce = $_POST["nonce"];
 $amount = $_POST["amount"];
 $name = $_POST["name"];
 $firstLast = explode(" ", $name);
+$title = "title";
 // echo($nonce);
 $result = $gateway->transaction()->sale([
   'amount' => $amount,
@@ -23,19 +24,33 @@ $result = $gateway->transaction()->sale([
 
 // Result handling
 if ($result->success) {
-// print($result);
+$title = "Success!";
 } else {
+  $title = "Failure :(";
   foreach($result->errors->deepAll() AS $error) {
       // print_r($error->attribute . ": " . $error->code . " " . $error->message . "\n");
   }
 }
 ?>
-<div align="center" class="main">
-<h1> R e s u l t </h1>
-  <div>
-<p>Amount: <?php echo($result->transaction->amount)?></p>
-<p>Status: <?php echo($result->transaction->status)?> </p>
-<p>ID: <?php echo($result->transaction->id)?> </p>
+
+<body style="font-family:Verdana;">
+<div style=";padding:15px;text-align:center;">
+  <header>
+    <h1 align="center"> Result </h1>
+  </header>
+</div>
+<div style="overflow:auto">
+<div class="menu">
+    <?php require_once("../includes/nav.html"); ?>
+</div>
+  <div class="main">
+    <body>
+      <h3><?php echo $title;?></h3>
+      <p>Amount: <?php echo($result->transaction->amount)?></p>
+      <p>Status: <?php echo($result->transaction->status)?> </p>
+      <p>ID: <?php echo($result->transaction->id)?> </p>
   </div>
 </div>
+    </body>
+<div style="text-align:center;padding:10px;margin-top:7px;"> {•̃̾_•̃̾} </div>
 </html>

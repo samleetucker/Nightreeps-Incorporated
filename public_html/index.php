@@ -24,7 +24,7 @@
         This project is being managed on the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank">Nightreeps-incorporated Git Hub repository</a>. Long term goals are to make Nightreeps-Incorporated an open repository where Treeps can work together to contribute to the project's success.
       <p>
         Check out the <a href="https://github.com/nightreeps-inc/Nightreeps-Incorporated" target="_blank"> Git Hub repository </a>to see the amount of work done so far, and be sure to watch or star it to follow along!
-      <p>Lastly, this project is "mobile first" -- anyone can pull it up on their phone using the URL and follow along without any kind of disruption or difficulty of use.
+      <p>Lastly, this project is built to be responsive to a lot of screen sizes -- anyone can pull it up on their phone or computer and follow along without any kind of disruption or difficulty of use.
       <br></br>
       <p>P.S. this is not a Nightreeps only zone.
 
