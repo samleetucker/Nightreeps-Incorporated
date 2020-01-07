@@ -10,7 +10,7 @@
 
 <div style=";padding:15px;text-align:center;">
   <header>
-    <h1 align="center">Drop-in UI Demo</h1>
+    <h1 align="center">3D Secure Demo</h1>
   </header>
     <h3></h3>
 </div>
@@ -24,26 +24,27 @@
 <div class="main">
 <!-- all the stuff you need for 3D Secure. -->
   <p> Omg you need a lot of info for 3D Secure. </p>
+  <div>
   <form id="3DSInfo" onsubmit="retrn false;">
-    <input type="text" id="amount" placeholder="amount"></input>
-    <input type="text" id="email" placeholder="email address"></input>
-    <input type="text" id="givenName" placeholder="first name"></input>
-    <input type="text" id="surname" placeholder="last name"></input>
-    <input type="text" id="phoneNumber" placeholder="phone number"></input>
-    <input type="text" id="streetAddress" placeholder="address"></input>
-    <input type="text" id="extendedAddress" placeholder="extended address"></input>
-    <input type="text" id="locality" placeholder="city"></input>
-    <input type="text" id="region" placeholder="region/state"></input>
-    <input type="text" id="postalCode" placeholder="zip"></input>
-    <input type="text" id="countryCodeAlpha2" placeholder="Country Code"></input>
+    <input type="text" id="amount" placeholder="amount" class="other-input"></input>
+    <input type="text" id="email" placeholder="email address" class="other-input"></input>
+    <input type="text" id="givenName" placeholder="first name" class="other-input"></input>
+    <input type="text" id="surname" placeholder="last name" class="other-input"></input>
+    <input type="text" id="phoneNumber" placeholder="phone number" class="other-input"></input>
+    <input type="text" id="streetAddress" placeholder="address" class="other-input"></input>
+    <input type="text" id="extendedAddress" placeholder="extended address" class="other-input"></input>
+    <input type="text" id="locality" placeholder="city" class="other-input"></input>
+    <input type="text" id="region" placeholder="region/state" class="other-input"></input>
+    <input type="text" id="postalCode" placeholder="zip" class="other-input"></input>
+    <input type="text" id="countryCodeAlpha2" placeholder="Country Code" class="other-input"></input>
   </form>
-
+  </div>
 <!-- Drop-in UI form. -->
       <form method="post" id="details" action="/customerCreate.php">
         <input type="hidden" id="nonce" name="nonce" />
       </form>
-
-    <div id="dropin-container" style="float: none; width:70%;"></div>
+<br>
+    <div id="dropin-container" style="float: left width:70%;"></div>
       <button id="submit-button" class="button">Request payment method</button>
       <script>
         var button = document.querySelector('#submit-button');
