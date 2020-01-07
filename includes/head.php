@@ -1,5 +1,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" charset="UTF-8">
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="/favicon-16x16.png">
     <title>Nightreeps Inc.</title>
     <!-- CSS stuff -->
     <link rel=stylesheet id=stylesheet type=text/css href="css/stylesheet.css">

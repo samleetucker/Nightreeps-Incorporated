@@ -1,11 +1,6 @@
 <?php
 require_once("../vendor/autoload.php");
 
-if(file_exists(__DIR__ . "/../.env")) {
-    $dotenv = new Dotenv\Dotenv(__DIR__ . "/../");
-    $dotenv->load();
-}
-
 $gateway = new Braintree_Gateway([
   'environment' => 'sandbox',
   'merchantId' => 'tt8srtpp8yfgfghp',

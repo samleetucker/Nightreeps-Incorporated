@@ -95,7 +95,7 @@
       <input type="number" class="hosted-field" id="amount" name="amount" placeholder="100.00"required>
 
       <label for="name" class="hosted-fields--label">Name</label>
-      <input type="text" class="hosted-field" id="amount" name="name" placeholder="Johnny Utah"required>
+      <input type="text" class="hosted-field" id="name" name="name" placeholder="Johnny Utah"required>
 
       <label for="card-number" class="hosted-fields--label">Card Number</label>
       <div id="card-number" class="hosted-field"></div>

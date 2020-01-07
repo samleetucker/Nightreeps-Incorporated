@@ -19,15 +19,15 @@
     <div class="main">
       <br></br>
       <p>The first thing any client-side component needs is client authorization. Most merchant will opt to use a <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
-        <p>However, currently in sandbox, and soon to be in production, these<a href="https://internal.braintreepayments.com/display/DD/Client+Authorization+-+JWT+Cheat+Sheet" target="_blank"> client tokens will expire in 24 hours </a>. That is why a client token should be generated every time a checkout page is landed on.
+        <p>However, currently in sandbox, and soon to be in production, these<a href="https://internal.braintreepayments.com/display/DD/Client+Authorization+-+JWT+Cheat+Sheet" target="_blank"> client tokens will expire in 24 hours</a>. That is why a client token should be generated every time a checkout page is landed on.
       </p>
       <br>
       <h4>So what happens if a client token is expired, but still used?</h4>
       <p>Tokens issued before the change will continue to be valid for the foreseeable future. A merchant does not have to worry about those tokens automatically expiring.
-        Any token issued after the change will expire after 24 hours. These exired tokens will lead to a few pieces of behavior which Support can look out for when fielding requests.</p>
-        <p>The biggest red flag for this will be merchants who reach out with blank checkout fields, or a Drop-in UI that does not load. Notice how the fields load, and the non Hosted Fields work just fine:</p>
+        Any token issued after the change will expire after 24 hours. These expired tokens will lead to a few pieces of behavior which Support can look out for when fielding requests.</p>
+        <p>The biggest red flag for this will be merchants who reach out with blank checkout fields, or a Drop-in UI that does not load. Notice below how the fields load, and the non Hosted Fields work just fine.</p>
         <br>
-        <p>See below the the client token being used. Note: it changes when you fix the fields.
+        <p>See below the the client token being used. <b>Note: it changes when you fix the fields.</b>
         <p><button data-toggle="collapse" data-target="#c2" class="button">Show/hide</button>
         <div id="c2" class="collapse"><pre class="code"><code id="client_token"></code></pre></div>
 
