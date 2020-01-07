@@ -22,10 +22,27 @@
   </div>
 
 <div class="main">
-    <!-- <h3 align="center"><p>Drop-in UI w/ 3D Secure</p></h3> -->
+<!-- all the stuff you need for 3D Secure. -->
+  <p> Omg you need a lot of info for 3D Secure. </p>
+  <form id="3DSInfo" onsubmit="retrn false;">
+    <input type="text" id="amount" placeholder="amount"></input>
+    <input type="text" id="email" placeholder="email address"></input>
+    <input type="text" id="givenName" placeholder="first name"></input>
+    <input type="text" id="surname" placeholder="last name"></input>
+    <input type="text" id="phoneNumber" placeholder="phone number"></input>
+    <input type="text" id="streetAddress" placeholder="address"></input>
+    <input type="text" id="extendedAddress" placeholder="extended address"></input>
+    <input type="text" id="locality" placeholder="city"></input>
+    <input type="text" id="region" placeholder="region/state"></input>
+    <input type="text" id="postalCode" placeholder="zip"></input>
+    <input type="text" id="countryCodeAlpha2" placeholder="Country Code"></input>
+  </form>
+
+<!-- Drop-in UI form. -->
       <form method="post" id="details" action="/customerCreate.php">
         <input type="hidden" id="nonce" name="nonce" />
       </form>
+
     <div id="dropin-container" style="float: none; width:70%;"></div>
       <button id="submit-button" class="button">Request payment method</button>
       <script>

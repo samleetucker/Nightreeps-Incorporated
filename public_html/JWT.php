@@ -38,6 +38,9 @@
           <label for="address" class="hosted-fields--label">Address</label>
           <input type="address" class="hosted-field" id="address" name="address" placeholder="24123 Green Herron Drive"required>
 
+          <label for="postalCode" class="hosted-fields--label">Postal Code</label>
+          <input type="text" class="hosted-field" id="postalCode" name="postalCode" placeholder="60410"required>
+
           <input type="number" class="hosted-field" id="amount" name="amount" value="100.00"required hidden>
 
           <label for="card-number" class="hosted-fields--label">Card Number</label>

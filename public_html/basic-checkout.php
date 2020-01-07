@@ -97,6 +97,9 @@
       <label for="name" class="hosted-fields--label">Name</label>
       <input type="text" class="hosted-field" id="name" name="name" placeholder="Johnny Utah"required>
 
+      <label for="postalCode" class="hosted-fields--label">Postal Code</label>
+      <input type="text" class="hosted-field" id="postalCode" name="postalCode" placeholder="60410"required>
+
       <label for="card-number" class="hosted-fields--label">Card Number</label>
       <div id="card-number" class="hosted-field"></div>
 

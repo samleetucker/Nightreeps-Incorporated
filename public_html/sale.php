@@ -7,6 +7,7 @@ require_once("../includes/braintree_init.php");
 $nonce = $_POST["nonce"];
 $amount = $_POST["amount"];
 $name = $_POST["name"];
+$postalCode = $_POST["postalCode"];
 $firstLast = explode(" ", $name);
 $title = "title";
 // echo($nonce);
@@ -19,6 +20,9 @@ $result = $gateway->transaction()->sale([
   'customer' => [
     'firstName' => $firstLast[0],
     'lastName' => $firstLast[1]
+  ],
+  'billing' => [
+    'postalCode' => $postalCode
   ]
 ]);
 
