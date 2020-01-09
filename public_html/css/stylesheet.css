@@ -1,4 +1,12 @@
 /* Basic styling */
+:root{
+  --light-grey: #E6E6E6;
+  --grey: #B3B3B3;
+  --dark-grey: #666666;
+  --extra-dark-grey: #262626;
+  --orange: #FF6B00;
+  --blue: #1524D9;
+}
 * {
   box-sizing: border-box;
 }
@@ -30,7 +38,7 @@
   min-height:40%;
   padding:0 20px;
   border-radius: 5px;
-  border: 2px solid #D6D6D6;
+  border: 1px solid #D6D6D6;
 }
 .right {
   float:left;
@@ -43,7 +51,7 @@
 .button {
   background-color: #f7f7f7;
   color: black;
-  border: 2px solid #D6D6D6;
+  border: 1px solid #D6D6D6;
   border-radius: 4px;
   padding: 7px;
   outline:none;
@@ -52,7 +60,6 @@
 .button:hover {
   background-color: #ededed;
   color: black;
-  border: 2px solid #D6D6D6;
   border-radius: 4px;
 }
 .code {
@@ -80,7 +87,7 @@
   }
   .main{
   border-radius: 0px;
-  border-width: 2px 0px 2px 0px;
+  border-width: 1px 0px 1px 0px;
   }
   ::-webkit-scrollbar {
       -webkit-appearance: none;
