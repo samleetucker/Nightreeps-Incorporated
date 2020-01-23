@@ -10,30 +10,86 @@ $name = $_POST["name"];
 $postalCode = $_POST["postalCode"];
 $firstLast = explode(" ", $name);
 $title = "title";
-// echo($nonce);
-$result = $gateway->transaction()->sale([
-  'amount' => $amount,
+$message = "Message: ";
+$result = $gateway->customer()->create([
+  'firstName' => $firstLast[0],
+  'lastName' => $firstLast[1],
   'paymentMethodNonce' => $nonce,
-  'options' => [
-    'submitForSettlement' => True
-  ],
-  'customer' => [
-    'firstName' => $firstLast[0],
-    'lastName' => $firstLast[1]
-  ],
-  'billing' => [
-    'postalCode' => $postalCode
-  ]
 ]);
+//if customer was created, create a transaction
+if ($result->success){
+  $customerID = $result->customer->id;
+  foreach ($result->customer->creditCards as $card){
+    $expiry = $card->expirationDate;
+  };
+  $result = $gateway->transaction()->sale([
+    'amount' => $amount,
+    'options' => [
+      'submitForSettlement' => True
+    ],
+    'customerId'=> $customerID,
+    'customer' => [
+      'firstName' => $firstLast[0],
+      'lastName' => $firstLast[1]
+    ],
+    'billing' => [
+      'postalCode' => $postalCode
+    ]
+  ]);
 
-// Result handling
-if ($result->success) {
-$title = "Success!";
-} else {
-  $title = "Failure :(";
-  foreach($result->errors->deepAll() AS $error) {
-      // print_r($error->attribute . ": " . $error->code . " " . $error->message . "\n");
+// then if transaction sale was success, print the info
+  if ($result->success) {
+    $title = "Success!";
+    $message = "<th>Transaction ID</th>
+    <th>Customer ID</th>
+    <th>Status</th>
+    <th>Amount</th>
+    <th>Expiration Date</th>
+    <tr>
+      <td> {$result->transaction->id} </td>
+      <td> {$customerID} </td>
+      <td> {$result->transaction->status} </td>
+      <td> {$result->transaction->amount} </td>
+      <td> {$expiry} </td>
+    </tr>";
+
+  } elseif (empty($result->errors->deepAll())) {
+// But if the transaction was created and failed, print the failed info
+    $title = "Failure :(";
+      $message = "
+      <th>Transaction ID</th>
+      <th>Customer ID</th>
+      <th>Status</th>
+      <th>Amount</th>
+      <tr>
+        <td> {$result->transaction->id} </td>
+        <td> {$customerID} </td>
+        <td> {$result->transaction->status} </td>
+        <td> {$result->transaction->amount} </td>
+      </tr>";
+    }else{
+//otherwise no transaction was created, which means there were errors to display. Iterate through those errors.
+      $title = "Validation error(s)";
+      $message = "<th>Attribute</th>
+            <th>Code</th>
+            <th>Message</th>";
+      foreach($result->errors->deepAll() AS $error) {
+        $message .= "<tr><td>" . $error->attribute . "</td><td>" . $error->code . "</td><td>" . $error->message . "</td></tr>";
+    }
   }
+} else{
+//If none of the above happened, verification failed
+  $title = "Failed Verification";
+  $message = "<th>Verification ID</th>
+  <th>Status</th>
+  <th>Message</th>
+  <th>Verification ID</th>
+  <tr>
+    <td> {$result->verification->amount} </td>
+    <td> {$result->verification->status} </td>
+    <td> {$result->message} </td>
+    <td> {$result->verification->id} </td>
+  </tr>";
 }
 ?>
 
@@ -50,9 +106,7 @@ $title = "Success!";
   <div class="main">
     <body>
       <h3><?php echo $title;?></h3>
-      <p>Amount: <?php echo($result->transaction->amount)?></p>
-      <p>Status: <?php echo($result->transaction->status)?> </p>
-      <p>ID: <?php echo($result->transaction->id)?> </p>
+      <table><?php echo $message;?></table>
   </div>
 </div>
     </body>
