@@ -15,7 +15,7 @@
     </div>
     <body>
       <div class="main">
-        <h3>Options</h3>
+        <h3>Overview</h3>
         <p>Braintree’s Vault Manager component is available
          to be utilized in a couple of different ways.
          The first, and most prominent way to use Vault Manager is via the Drop-in UI.
