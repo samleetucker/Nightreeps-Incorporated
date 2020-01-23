@@ -57,7 +57,9 @@
 <li>paymentMethod.details - returns a JSON object of all of the details associated with the nonce such as BIN, Card Brand, and Last 4</li>
 <li>paymentMethod.type - signifies the type of payment method</li>
 </ul>
-        Payment method info for customer: 692024293
+        <h3>Example</h3>
+        <p>Here is an example of the above script iterating through the Payment method details for customer: 692024293. Note that this is all fetched on the client-side, and there is no server-side commuinication taking place to fetch this data.</p>
+        <br>
         <table id="display">
         </table>
         <script>
