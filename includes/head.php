@@ -7,8 +7,9 @@
     <link rel=stylesheet id=stylesheet type=text/css href="css/stylesheet.css">
     <!-- Braintree Stuff -->
     <script src="https://js.braintreegateway.com/web/dropin/1.21.0/js/dropin.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.56.0/js/client.min.js"></script>
-    <script src="https://js.braintreegateway.com/web/3.56.0/js/hosted-fields.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.57.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.57.0/js/hosted-fields.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.57.0/js/vault-manager.min.js"></script>
     <!-- Bootstrap stuff -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
