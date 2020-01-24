@@ -16,11 +16,12 @@
     <body>
       <div class="main">
         <h3>Overview</h3>
+        <p>The Vault Manager is a client-side component which allows the client to fetch payment information about any given customer. This enables client-side integrations to swiftly fetch and display payment methods to customers for them to interact with. It doesn't end there, however, since your integration can utilize the nonces returned to make server-side actions immediately based on the customer action. For example a customer can be displayed 3 of their stored cards and choose which to delete, which to use to create a transaction with, or even which to update their subscription to.</p>
         <p>Braintree’s Vault Manager component is available
          to be utilized in a couple of different ways.
          The first, and most prominent way to use Vault Manager is via the Drop-in UI.
          The Drop-in UI has the Vault Manager built-in and can be easily switched on and off without many changes
-         to your code. Learn more at our Drop-in UI Customization page.</p>
+         to your code. <a href="https://developers.braintreepayments.com/guides/drop-in/customization/javascript/v3#display-a-saved-payment-method">Learn more at our Drop-in UI Customization page.</a></p>
 
          <p>Alternatively, the Vault Manager can be implemented standalone as a way to fetch payment method details, generate nonces, and display payment methods of any given customer ID. </p>
          <h3>Setup</h3>
