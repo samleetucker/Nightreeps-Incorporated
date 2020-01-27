@@ -30,7 +30,7 @@
           <h3>Client-side implementation</h3>
           <p>To begin implementing this component, you will need to setup a client. Set up the SDK and create a client. If you use other payment method types, such as PayPal, then you can re-use the same client.</p>
           <p>Pass the clientInstance to braintree.vaultManager.create within the options object:</p>
-          <pre class="code"><code class="prettyprint">braintree.vaultManager.create({
+          <pre class="code"><code class="prettyprint lang-javascript">braintree.vaultManager.create({
     client: clientInstance
 }, function(err, vaultManagerInstance){
   if(err){
