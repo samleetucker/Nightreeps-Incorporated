@@ -152,7 +152,7 @@
     <h4> So what needs to be done? </h4>
     <p>It is our recommendation to generate a client token when the checkout page is landed on. This will avoid any problems with client tokens going any longer than 24 hours. Since the client token used above is expired, a new one will need to be generated to remedy the issue.
       <h5><p>Here is a code example. It is generated on the server-side:</p></h5>
-      <div><pre class="code"><code class="php">$gateway->clientToken()->generate([
+      <div><pre class="code"><code class="prettyprint lang-php">$gateway->clientToken()->generate([
   'merchantAccountId' => 'MindSapling-CAD'
 ])</code></pre></div>
       <p>You can click the below button to run this code, and watch the Hosted Fields above get fixed!</p>

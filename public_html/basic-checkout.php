@@ -22,7 +22,7 @@
     <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is the code and its result: </p></h4>
     <pre class="code">
-      <code class="php>" style="background-color: #f7f7f7;">$gateway->clientToken()->generate([
+      <code class="prettyprint">$gateway->clientToken()->generate([
   'customerId' => 242967293,
   'merchantAccountId' => 'MindSapling-CAD'
 ])</code>
@@ -43,7 +43,7 @@
     <p><button data-toggle="collapse" data-target="#c2" class="button">Here is an example</button>
     <div id="c2" class="collapse">
 <pre class="code">
-  <code id="decode" class="https">"version":2,
+  <code id="decode" class="prettyprint">"version":2,
   "authorizationFingerprint":eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtc2FuZGJveCIsImlzcyI6IkF1dGh5In0.eyJleHAiOjE1NzYyMTI1MDEsImp0aSI6IjY4OTU0MGVjLTM1MDQtNGIxNi05YzU3LTZiNmRhMTQ4YjA0NSIsInN1YiI6InR0OHNydHBwOHlmZ2ZnaHAiLCJpc3MiOiJBdXRoeSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InR0OHNydHBwOHlmZ2ZnaHAiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJvcHRpb25zIjp7ImN1c3RvbWVyX2lkIjoyNDI5NjcyOTMsIm1lcmNoYW50X2FjY291bnRfaWQiOiJNaW5kU2FwbGluZy1DQUQifX0.LwDd-s35WTMeFScTO9Tlfum0W5pleySG69JYDLJobMJOchWyCHFGe-50G2tMx2x-2eJ3R4qRaWdc2BZNm24Jjg?customer_id=,
   "configUrl":https://api.sandbox.braintreegateway.com:443/merchants/tt8srtpp8yfgfghp/client_api/v1/configuration,
   "graphQL": {

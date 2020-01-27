@@ -26,11 +26,11 @@
          <p>Alternatively, the Vault Manager can be implemented standalone as a way to fetch payment method details, generate nonces, and display payment methods of any given customer ID. </p>
          <h3>Setup</h3>
          <p>The Vault Manager is available directly from our servers which you can include on your site as a script tag or download the file and save locally:<p>
-          <pre class="code"><code class="html">&#60;script src="https://js.braintreegateway.com/web/3.57.0/js/vault-manager.min.js">&#60;/script></code></pre>
+          <pre class="code"><code class="prettyprint">&#60;script src="https://js.braintreegateway.com/web/3.57.0/js/vault-manager.min.js">&#60;/script></code></pre>
           <h3>Client-side implementation</h3>
           <p>To begin implementing this component, you will need to setup a client. Set up the SDK and create a client. If you use other payment method types, such as PayPal, then you can re-use the same client.</p>
           <p>Pass the clientInstance to braintree.vaultManager.create within the options object:</p>
-          <pre class="code"><code>braintree.vaultManager.create({
+          <pre class="code"><code class="prettyprint">braintree.vaultManager.create({
     client: clientInstance
 }, function(err, vaultManagerInstance){
   if(err){
@@ -41,7 +41,7 @@
 });</code></pre>
         <h3>Fetching payment methods </h3>
           <p>Fetching payment methods can be done by iterating through the paymentMethods returned from the fetchPaymentMethods() callback. These results can be iterated through to find all of their relevant data.</p>
-        <pre class="code"><code>braintree.vaultManager.create({
+        <div><pre class="code"><code class="prettyprint">braintree.vaultManager.create({
   client: clientInstance
 }, function(err, vaultManagerInstance){
   vaultManagerInstance.fetchPaymentMethods(function (err, paymentMethods) {
@@ -51,7 +51,7 @@
       // paymentMethod.type < a constant signifying the type
     });
   });
-});</code></pre>
+});</code></pre></div>
 <p>The following paramters can be used to fetch specific data.</p>
 <ul>
   <li>paymentMethod.nonce - returns a nonce to be used in transactions, or updates to the payment method </li>
@@ -59,7 +59,17 @@
 <li>paymentMethod.type - signifies the type of payment method</li>
 </ul>
         <h3>Example</h3>
-        <p>Here is an example of the above script iterating through the Payment method details for customer: 692024293. Note that this is all fetched on the client-side, and there is no server-side commuinication taking place to fetch this data.</p>
+      <p>Here is an example of the above script iterating through the Payment method details for customer: 692024293. Note that this is all fetched on the client-side, and there is no server-side commuinication taking place to fetch this data.</p>
+        <a class="button" data-toggle="collapse" href="#collapseJSON" role="button" aria-expanded="false" aria-controls="collapseJSON">
+          View JSON Result
+        </a>
+        <div class="collapse" id="collapseJSON">
+          <div>
+            <br>
+            <pre class="code"><code id="innerCollapse"></code></pre>
+          </div>
+        </div>
+      </p>
         <br>
         <table id="display">
         </table>
@@ -81,8 +91,11 @@
                 console.log(paymentMethod.nonce);
                 console.log(paymentMethod.details);
                 pmt = paymentMethod.details;
+                var fetchedNonce = paymentMethod.nonce;
+                var clps = document.getElementById("innerCollapse");
                 var table = document.getElementById("display");
                 table.insertRow();
+                clps.innerHTML += '<p>' + JSON.stringify(pmt, null, 2) + '</p>' + '<p> Nonce:' + fetchedNonce + '</p>';
                 for (x in pmt) {
                   table.innerHTML += '<td>' + x + ': ' + pmt[x] + '</td>';
                 }
