@@ -17,22 +17,25 @@
     <body>
       <div class="main">
         <h3>Overview</h3>
-        <p>The Vault Manager is a client-side component which allows the client to fetch payment information about any given customer. This enables client-side integrations to swiftly fetch and display payment methods to customers for them to interact with. It doesn't end there, however, since your integration can utilize the nonces returned to make server-side actions immediately based on the customer action. For example a customer can be displayed 3 of their stored cards and choose which to delete, which to use to create a transaction with, or even which to update their subscription to.</p>
+          <p>The Vault Manager is a client-side component which allows the client to fetch payment information about any given customer. This enables client-side integrations to swiftly fetch and display payment methods to customers for them to interact with.</p>
+        <h3>Use cases & limitations</h3>
+          <p>The main benefit of using the Vault Manager is that it eliminates the use of any communication with your server to fetch the payment methods for a customer. As well, if you would like to escape the limitations of the Drop-in UI, you can create a custom UI that has payment method data populated by the Vault Manager. Using the nonces returned from the Vault Manager, any of our server-side API calls can be made based on the customer’s selection, minimizing the amount of back-and-fourth between your client and server.</p>
+          <p>Vault Manager will only display the 8 most recently used payment methods, listed in order of most recently used. You can use the <span style="background-color: #E6E6E6;font-weight: bold;">defaultFirst</span> option to display the customer’s default payment method first, but if the default payment method is not one of those 8 results, it will still not be collected/displayed.</p>
         <h3>Drop-in UI</h3>
-        <p>Braintree’s Vault Manager component is available
-         to be utilized in a couple of different ways.
-         The first, and most prominent way to use Vault Manager is via the Drop-in UI.
+          <p>Braintree’s Vault Manager component is available
+         to be implemented automatically as part of the Drop-in UI.
          The Drop-in UI has the Vault Manager built-in and can be easily switched on and off without many changes
          to your code. <a href="https://developers.braintreepayments.com/guides/drop-in/customization/javascript/v3#display-a-saved-payment-method">Learn more at our Drop-in UI Customization page.</a></p>
          <img border="0" alt="Drop-in UI Demonstration" src="https://developers.braintreepayments.com/img/developers/client-sdk-drop-in-web.png" style="width: 75%">
-         <h3>Standalone</h3>
-         <p>Alternatively, the Vault Manager can be implemented standalone as a way to fetch payment method details, generate nonces, and display payment methods of any given customer ID. </p>
-         <p>The Vault Manager is available directly from our servers which you can include on your site as a script tag or download the file and save locally:<p>
+        <h3>Standalone</h3>
+          <p>Alternatively, the Vault Manager can be implemented standalone as a way to fetch payment method details, generate nonces, and display payment methods of any given customer ID. </p>
+          <p>The Vault Manager is available directly from our servers which you can include on your site as a script tag or download the file and save locally:<p>
           <pre class="code"><code class="prettyprint">&#60;script src="https://js.braintreegateway.com/web/3.57.0/js/vault-manager.min.js">&#60;/script></code></pre>
-          <h3>Client-side implementation</h3>
+        <h3>Client-side implementation</h3>
           <p>To begin implementing this component, you will need to setup a client. Set up the SDK and create a client. If you use other payment method types, such as PayPal, then you can re-use the same client.</p>
+          <p>The client must <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php#customer_id">include a customer ID</a> for Vault Manager to work.</p>
           <p>Pass the <span style="background-color: #E6E6E6;font-weight: bold;">clientInstance</span> to <span style="background-color: #E6E6E6;font-weight: bold;">braintree.vaultManager.create</span> within the options object:</p>
-          <pre class="code"><code class="prettyprint lang-javascript">braintree.vaultManager.create({
+        <pre class="code"><code class="prettyprint lang-javascript">braintree.vaultManager.create({
     client: clientInstance
 }, function(err, vaultManagerInstance){
   if(err){
