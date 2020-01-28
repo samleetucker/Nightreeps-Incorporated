@@ -42,7 +42,7 @@
   });
 });</code></pre>
         <h3>Fetching payment methods </h3>
-          <p>Fetching payment methods can be done by iterating through the paymentMethods returned from the fetchPaymentMethods() callback. These results can be iterated through to find all of their relevant data.</p>
+          <p>Fetching payment methods can be done by iterating through the paymentMethods returned from the <span style="background-color: #E6E6E6;font-weight: bold;">fetchPaymentMethods()</span> callback. These results can be iterated through to find all of their relevant data.</p>
         <div><pre class="code"><code class="prettyprint">braintree.vaultManager.create({
   client: clientInstance
 }, function(err, vaultManagerInstance){
