@@ -31,7 +31,7 @@
           <pre class="code"><code class="prettyprint">&#60;script src="https://js.braintreegateway.com/web/3.57.0/js/vault-manager.min.js">&#60;/script></code></pre>
           <h3>Client-side implementation</h3>
           <p>To begin implementing this component, you will need to setup a client. Set up the SDK and create a client. If you use other payment method types, such as PayPal, then you can re-use the same client.</p>
-          <p>Pass the clientInstance to braintree.vaultManager.create within the options object:</p>
+          <p>Pass the <span style="background-color: #E6E6E6;font-weight: bold;">clientInstance</span> to <span style="background-color: #E6E6E6;font-weight: bold;">braintree.vaultManager.create</span> within the options object:</p>
           <pre class="code"><code class="prettyprint lang-javascript">braintree.vaultManager.create({
     client: clientInstance
 }, function(err, vaultManagerInstance){
