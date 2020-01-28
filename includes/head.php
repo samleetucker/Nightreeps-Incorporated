@@ -18,4 +18,19 @@
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link rel="stylesheet" type="text/css" href="css/prettify.css">
     <body onload="PR.prettyPrint()">
+      <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th {
+        background-color: #ccc
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      </style>
 </head>
