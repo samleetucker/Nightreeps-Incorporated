@@ -7,11 +7,19 @@
   --orange: #FF6B00;
   --blue: #1524D9;
 }
+@font-face {
+	font-family: 'Conv_B_Proportional-Bold';
+	src: url('fonts/B_Proportional-Bold.eot');
+	src: local('☺'), url('fonts/B_Proportional-Bold.woff') format('woff'), url('fonts/B_Proportional-Bold.ttf') format('truetype'), url('fonts/B_Proportional-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
 header{
-  font-size: 25px;
+  font-family: "Conv_B_Proportional-Bold";
+  font-size: 40px;
   background-color: #202020;
   color: white;
   min-height: 100px;
