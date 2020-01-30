@@ -26,9 +26,10 @@ header{
   padding: 10px;
 }
 h2{
+  font-size: 40px !important;
   padding-top: 30px;
   padding-bottom: 30px;
-  font-weight: bold;
+  font-family: "Conv_B_Proportional-Bold" !important;
 }
 .menu {
   float:left;
