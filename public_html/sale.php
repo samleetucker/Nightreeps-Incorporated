@@ -94,18 +94,13 @@ if ($result->success){
 ?>
 
 <body style="font-family:Verdana;">
-<div style=";padding:15px;text-align:center;">
-  <header>
-    <h1 align="center"> Result </h1>
-  </header>
-</div>
 <div style="overflow:auto">
 <div class="menu">
     <?php require_once("../includes/nav.html"); ?>
 </div>
   <div class="main">
     <body>
-      <h3><?php echo $title;?></h3>
+      <h2><?php echo $title;?></h2>
       <table><?php echo $message;?></table>
   </div>
 </div>

@@ -4,21 +4,13 @@
 <!-- Braintree init, the file which creates the gateway using api keys -->
 <?php require_once("../includes/braintree_init.php"); ?>
 <body style="font-family:Verdana;">
-
-<div style=";padding:15px;text-align:center;">
-  <header>
-    <h1 align="center">Hosted Fields.</h1>
-  </header>
-    <h3>They're like fields -- but hosted.</h3>
-</div>
-
-<div style="overflow:auto">
+<div style="overflow:auto;">
   <div class="menu">
     <?php require_once("../includes/nav.html"); ?>
   </div>
-
 <div class="main">
-    <br></br>
+  <h2>Hosted Fields Demo</h2>
+    <br>
     <p>The first thing any client-side component needs is client authorization. This example uses a  <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
     <h4><p>Here is the code and its result: </p></h4>
     <pre class="code">

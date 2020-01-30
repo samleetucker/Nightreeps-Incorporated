@@ -5,17 +5,12 @@
 </head>
 </style>
 <body style="font-family:Verdana;">
-  <div style=";padding:15px;text-align:center;">
-    <header>
-      <h1 align="center"> Vault Manager </h1>
-    </header>
-  </div>
   <div style="overflow:auto">
     <div class="menu">
       <?php require_once("../includes/nav.html"); ?>
     </div>
-    <body>
       <div class="main">
+        <h2>Vault Manager</h2>
         <h3>Overview</h3>
           <p>The Vault Manager is a client-side component which allows the client to fetch payment information about any given customer. This enables client-side integrations to swiftly fetch and display payment methods to customers for them to interact with.</p>
         <h3>Use cases & limitations</h3>
@@ -65,6 +60,7 @@
 </ul>
         <h3>Example</h3>
       <p>Here is an example of the above script iterating through the Payment method details for customer: 692024293. Note that this is all fetched on the client-side, and there is no server-side commuinication taking place to fetch this data.</p>
+      <br>
         <a class="button" data-toggle="collapse" href="#collapseJSON" role="button" aria-expanded="false" aria-controls="collapseJSON">
           View JSON formatted card details
         </a>

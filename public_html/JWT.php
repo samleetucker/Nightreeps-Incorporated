@@ -4,20 +4,14 @@
 <!-- Braintree init, the file which creates the gateway using api keys -->
 <?php require_once("../includes/braintree_init.php"); ?>
 <body style="font-family:Verdana;">
-  <div style=";padding:15px;text-align:center;">
-    <header>
-      <h1 align="center">Expired Client Token Demo</h1>
-    </header>
-    <h3></h3>
-  </div>
-
   <div style="overflow:auto">
     <div class="menu">
       <?php require_once("../includes/nav.html"); ?>
     </div>
 
     <div class="main">
-      <br></br>
+      <h2>JWT Demo</h2>
+      <br>
       <p>The first thing any client-side component needs is client authorization. Most merchant will opt to use a <a href="https://developers.braintreepayments.com/reference/request/client-token/generate/php" target="_blank">client token.</a></p>
         <p>However, currently in sandbox, and soon to be in production, these<a href="https://internal.braintreepayments.com/display/DD/Client+Authorization+-+JWT+Cheat+Sheet" target="_blank"> client tokens will expire in 24 hours</a>. That is why a client token should be generated every time a checkout page is landed on.
       </p>

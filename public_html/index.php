@@ -4,20 +4,17 @@
   <?php require_once("../includes/head.php"); ?>
 </head>
 <body style="font-family:Verdana;">
-<div style=";padding:15px;text-align:center;">
-  <header>
+  <!-- <header>
     <h1 align="center"> ┬─┬ノ( º _ ºノ) Nightreeps Inc. </h1>
-  </header>
+  </header> -->
     <!-- <h3>Welcome.</h3> -->
-</div>
 <div style="overflow:auto">
 <div class="menu">
     <?php require_once("../includes/nav.html"); ?>
 </div>
   <div class="main">
     <body>
-      <br>
-      <h4> Night-what-inc . . ?</h4>
+      <h2> Night-what-inc . . ?</h2>
       <p>
         Nightreeps Inc. is a growing collection of integrations designed to showcase specific aspects of our products, enable end to end testing, and simply provide a showcase of what our product can do.
       <p>
