@@ -7,14 +7,6 @@
 <!-- generating a client token -->
   <script>var client_token = "<?php echo($gateway->clientToken()->generate());?>"
   </script>
-
-<div style=";padding:15px;text-align:center;">
-  <header>
-    <h1 align="center">3D Secure Demo</h1>
-  </header>
-    <h3></h3>
-</div>
-
 <div style="overflow:auto">
   <div class="menu">
     <!-- navigation will go here -->
@@ -22,21 +14,22 @@
   </div>
 
 <div class="main">
+  <h2>3D Secure Verifications</h2>
 <!-- all the stuff you need for 3D Secure. -->
   <p> Omg you need a lot of info for 3D Secure. </p>
   <div>
   <form id="3DSInfo" onsubmit="retrn false;">
-    <input type="text" id="amount" placeholder="amount" class="other-input"></input>
-    <input type="text" id="email" placeholder="email address" class="other-input"></input>
-    <input type="text" id="givenName" placeholder="first name" class="other-input"></input>
-    <input type="text" id="surname" placeholder="last name" class="other-input"></input>
-    <input type="text" id="phoneNumber" placeholder="phone number" class="other-input"></input>
-    <input type="text" id="streetAddress" placeholder="address" class="other-input"></input>
-    <input type="text" id="extendedAddress" placeholder="extended address" class="other-input"></input>
-    <input type="text" id="locality" placeholder="city" class="other-input"></input>
-    <input type="text" id="region" placeholder="region/state" class="other-input"></input>
-    <input type="text" id="postalCode" placeholder="zip" class="other-input"></input>
-    <input type="text" id="countryCodeAlpha2" placeholder="Country Code" class="other-input"></input>
+    <input type="text" id="amount" placeholder="amount" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="email" placeholder="email address" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="givenName" placeholder="first name" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="surname" placeholder="last name" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="phoneNumber" placeholder="phone number" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="streetAddress" placeholder="address" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="extendedAddress" placeholder="extended address" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="locality" placeholder="city" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="region" placeholder="region/state" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="postalCode" placeholder="zip" class="other-input" onchange="getParam();"></input>
+    <input type="text" id="countryCodeAlpha2" placeholder="Country Code" class="other-input" onchange="getParam();"></input>
   </form>
   </div>
 <!-- Drop-in UI form. -->
@@ -50,52 +43,40 @@
         var button = document.querySelector('#submit-button');
         var form = document.querySelector('#details');
         var submit = document.querySelector('input[type="submit"]');
-        var threeDSecureParameters = {
-          amount: '500.00',
-          email: 'test@example.com',
-          billingAddress: {
-          givenName: 'Jill', // ASCII-printable characters required, else will throw a validation error
-          surname: 'Doe', // ASCII-printable characters required, else will throw a validation error
-          phoneNumber: '8101234567',
-          streetAddress: '555 Smith St.',
-          extendedAddress: '#5',
-          locality: 'Oakland',
-          region: 'CA',
-          postalCode: '12345',
-          countryCodeAlpha2: 'US'
-        },
-        additionalInformation: {
-          workPhoneNumber: '8101234567',
-          shippingGivenName: 'Jill',
-          shippingSurname: 'Doe',
-          shippingPhone: '8101234567',
-          shippingAddress: {
-            streetAddress: '555 Smith St.',
-            extendedAddress: '#5',
-            locality: 'Oakland',
-            region: 'CA',
-            postalCode: '12345',
-            countryCodeAlpha2: 'US'
-          }
-        },
-      };
-
-        braintree.dropin.create({
-          authorization: client_token,
-          container: '#dropin-container',
-          threeDSecure: true
-        }, function (createErr, instance) {
-          button.addEventListener('click', function () {
-            instance.requestPaymentMethod({
-              threeDSecure: threeDSecureParameters
-            },function (requestPaymentMethodErr, payload) {
-              document.querySelector('#nonce').value = payload.nonce;
-              var lenonce = payload.nonce;
-              console.log(lenonce);
-              form.submit()
+        function getParam(){
+          var threeDSecureParameters = {
+            amount: document.getElementById('amount').value,
+            email: document.getElementById('email').value,
+            billingAddress: {
+              givenName: document.getElementById('givenName').value, // ASCII-printable characters required, else will throw a validation error
+              surname: document.getElementById('surname').value, // ASCII-printable characters required, else will throw a validation error
+              phoneNumber: document.getElementById('phoneNumber').value,
+              streetAddress: document.getElementById('streetAddress').value,
+              extendedAddress: document.getElementById('extendedAddress').value,
+              locality: document.getElementById('locality').value,
+              region: document.getElementById('region').value,
+              postalCode: document.getElementById('postalCode').value,
+              countryCodeAlpha2: document.getElementById('countryCodeAlpha2').value
+            }
+          };
+          console.log(threeDSecureParameters.email);
+          braintree.dropin.create({
+            authorization: client_token,
+            container: '#dropin-container',
+            threeDSecure: true
+          }, function (createErr, instance) {
+            button.addEventListener('click', function () {
+              instance.requestPaymentMethod({
+                threeDSecure: threeDSecureParameters
+              },function (requestPaymentMethodErr, payload) {
+                document.querySelector('#nonce').value = payload.nonce;
+                var lenonce = payload.nonce;
+                console.log(lenonce);
+                form.submit()
+              });
             });
           });
-        });
+        };
       </script>
 
 </div>
