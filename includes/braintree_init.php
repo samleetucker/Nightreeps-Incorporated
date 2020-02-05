@@ -3,9 +3,9 @@ require_once("../vendor/autoload.php");
 
 $gateway = new Braintree_Gateway([
   'environment' => 'sandbox',
-  'merchantId' => 'tt8srtpp8yfgfghp',
-  'publicKey' => 't93rv9zd344vn2td',
-  'privateKey' => '43b01fc0041eac2b913a2f251d3e1e48'
+  'merchantId' => '5zmrvsycrfhd2tc8',
+  'publicKey' => '9j84yprmzqw497d8',
+  'privateKey' => 'ec2f1b7a2333e010a7d8e7193a8d68bc'
 ]);
 
 // Nicks AIB Sandbox
